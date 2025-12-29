@@ -1,0 +1,7 @@
+{
+  "name": "wamanApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
