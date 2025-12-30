@@ -1,0 +1,30 @@
+<ion-content class="login-page" fullscreen>
+  <div class="login-wrapper">
+    <div class="logo">
+      <!-- Logo demo SVG -->
+      <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="30" stroke="#3880ff" stroke-width="4"/>
+        <path d="M20 32l8 8 16-16" stroke="#3880ff" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h1>Please insert valid email</h1>
+
+    <ng-container *ngIf="step==='sendOtp'">
+      <ion-item lines="none">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="sendOtp()">Send OTP</ion-button>
+      <ion-button expand="block" class="skip" (click)="skip()">Skip</ion-button>
+    </ng-container>
+
+    <ng-container *ngIf="step==='verifyOtp'">
+      <ion-item lines="none">
+        <ion-label position="floating">OTP code</ion-label>
+        <ion-input [(ngModel)]="code"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="verifyOtp()">OTP verify</ion-button>
+    </ng-container>
+  </div>
+</ion-content>

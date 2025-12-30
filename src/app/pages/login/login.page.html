@@ -1,0 +1,27 @@
+<ion-content class="login-page" fullscreen>
+  <div class="login-wrapper">
+    <div class="logo">
+      <!-- Logo demo SVG -->
+      <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="30" stroke="#3880ff" stroke-width="4"/>
+        <path d="M20 32l8 8 16-16" stroke="#3880ff" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h1>Login</h1>
+
+    <form (ngSubmit)="login()" class="login-form">
+      <ion-item lines="none">
+        <ion-label position="floating">Registration number</ion-label>
+        <ion-input type="text" [(ngModel)]="unionNumber" name="unionNumber"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating">Id card number</ion-label>
+        <ion-input type="text" [(ngModel)]="idCardNumber" name="idCardNumber"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" type="submit">Login</ion-button>
+    </form>
+  </div>
+</ion-content>
